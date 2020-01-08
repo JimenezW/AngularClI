@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +10,23 @@ export class MenuComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit()
+  {
+    $(document).ready(function(){
+      console.log('hola mundi');
+      $('.menu li:has(ul)').click(function(e){
+          e.preventDefault();
+          if($(this).hasClass('activado')){
+              $(this).removeClass('activado');
+              $(this).children('ul').slideUp();
+          }else{
+              $('.menu li ul').slideUp();
+              $('.menu li').removeClass('activado');
+              $(this).addClass('activado');
+              $(this).children('ul').slideDown();
+          }
+      });
+  });
   }
 
 }

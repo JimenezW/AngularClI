@@ -21,10 +21,14 @@
     width: 95%;
     padding: 2%;
 }
-
+.menu li{
+    height: 100x;
+}
 .menu li a{
     color: #494949;
     display: block;
+    height: 30px;
+    font-size: medium;
 }
 
 .contenerdor-menu .menu li a:hover {
@@ -48,7 +52,7 @@
 }
 
 .contenerdor-menu .menu ul{
-    /*display: none;*/
+    display: none;
 }
 
 .contenerdor-menu .menu ul li a {
@@ -56,6 +60,10 @@
     color: #e9e9e9;
 }
 
+.contenerdor-menu .menu .activado > a{
+    background: #1a95d5;
+    color: #fff;
+}
 .contenerdor-menu .menu ul li a:hover {
     background: #1a94d5;
     color: white;
