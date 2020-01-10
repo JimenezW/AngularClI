@@ -13,7 +13,6 @@ export class MenuComponent implements OnInit {
   public ngOnInit()
   {
     $(document).ready(function(){
-      console.log('hola mundi');
       $('.menu li:has(ul)').click(function(e){
           e.preventDefault();
           if($(this).hasClass('activado')){
